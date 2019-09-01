@@ -1,12 +1,10 @@
 #pragma once
 
+#include "Character.h"
 #include "Functions.h"
-#include <iostream>	
-#include <string>
-#include <iomanip>	
 #include <ctime>
+#include <cmath>
 
-using namespace std;
 
 
 class Game
@@ -18,16 +16,20 @@ public:
 	//Operators
 
 	//Functions
+	void initGame();
 	void mainMenu();
 
 	//Accessors
 	inline bool getPlaying() const { return this->playing; }
 
 
-	//Modifiers
+	//Modifiers	
 
 private:
 	int choice;
 	bool playing;
+
+	//Character related
+	Character character;
 };
 
